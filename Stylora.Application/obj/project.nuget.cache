@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "k3Ric4J7Y+c=",
+  "success": true,
+  "projectFilePath": "D:\\Licenta\\Stylora\\Stylora.Application\\Stylora.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Karina\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,6 @@
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.csproj.AssemblyReference.cache
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.GeneratedMSBuildEditorConfig.editorconfig
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.AssemblyInfoInputs.cache
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.AssemblyInfo.cs
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.csproj.CoreCompileInputs.cache
+d:\Licenta\Stylora\Stylora.Application\obj\Debug\net9.0\Stylora.Application.sourcelink.json
