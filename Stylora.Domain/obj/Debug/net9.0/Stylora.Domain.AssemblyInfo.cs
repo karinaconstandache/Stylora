@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Stylora.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79fb0fe18ee67778253cf419192a3164365df2fb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31f68e062fa747c769406935af62da4ec382cc1d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Stylora.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Stylora.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
