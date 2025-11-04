@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U0eFGZ8+/mM=",
+  "dgSpecHash": "VK/WS4jwbEU=",
   "success": true,
-  "projectFilePath": "D:\\Licenta\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Karina\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.10\\microsoft.extensions.configuration.abstractions.9.0.10.nupkg.sha512",
     "C:\\Users\\Karina\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.10\\microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",

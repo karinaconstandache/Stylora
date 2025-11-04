@@ -6,6 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+
+// Configure HuggingFace settings
+builder.Services.Configure<HuggingFaceConfiguration>(
+    builder.Configuration.GetSection(HuggingFaceConfiguration.SectionName));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

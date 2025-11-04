@@ -190,11 +190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Licenta\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
       "projectName": "Stylora.Infrastructure",
-      "projectPath": "D:\\Licenta\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Infrastructure\\Stylora.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Karina\\.nuget\\packages\\",
-      "outputPath": "D:\\Licenta\\Stylora\\Stylora.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -215,8 +215,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Licenta\\Stylora\\Stylora.Application\\Stylora.Application.csproj": {
-              "projectPath": "D:\\Licenta\\Stylora\\Stylora.Application\\Stylora.Application.csproj"
+            "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Application\\Stylora.Application.csproj": {
+              "projectPath": "C:\\Users\\Karina\\Desktop\\Stylora\\Stylora.Application\\Stylora.Application.csproj"
             }
           }
         }
@@ -258,7 +258,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
