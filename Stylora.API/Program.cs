@@ -1,19 +1,23 @@
-using Stylora.Application;
-using Stylora.Infrastructure;
+using Stylora.Domain.Interfaces;
+using Stylora.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
-builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructureServices(builder.Configuration);
-
-// Configure HuggingFace settings
-builder.Services.Configure<HuggingFaceConfiguration>(
-    builder.Configuration.GetSection(HuggingFaceConfiguration.SectionName));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHttpClient();
+
+
+// 1. Register the Service with a Typed HttpClient
+// This tells .NET: "When a controller asks for IVirtualTryOnService, create a VertexTryOnService and give it an HttpClient."
+builder.Services.AddHttpClient<IVirtualTryOnService, VertexTryOnService>();
+
+// 2. Set Google Auth Credential Path
+// This forces the Google Library to look for 'gcp-key.json' in your API root folder.
+// Note: In production, you should set this in the server's actual Environment Variables, not code.
+System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "gcp-key.json");
+
+// -----------------------------------
 
 builder.Services.AddCors(options =>
 {
@@ -28,7 +32,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Middleware
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -37,8 +41,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
 app.UseCors("AllowAngularApp");
+
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();
