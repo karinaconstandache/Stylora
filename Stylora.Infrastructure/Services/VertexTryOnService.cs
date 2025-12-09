@@ -13,7 +13,7 @@ namespace Stylora.Infrastructure.Services
     public class VertexTryOnService : IVirtualTryOnService
     {
         private readonly HttpClient _httpClient;
-        // ⚠️ Verify this is your exact Project ID
+        // Verify this is your exact Project ID
         private const string ProjectId = "gen-lang-client-0932195243"; 
         private const string Location = "us-central1"; 
         private const string ModelId = "virtual-try-on-preview-08-04";
