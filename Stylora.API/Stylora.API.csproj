@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Stylora.Application\Stylora.Application.csproj" />
     <ProjectReference Include="..\Stylora.Infrastructure\Stylora.Infrastructure.csproj" />
+    <ProjectReference Include="..\Stylora.Domain\Stylora.Domain.csproj" />
   </ItemGroup>
 
 </Project>
