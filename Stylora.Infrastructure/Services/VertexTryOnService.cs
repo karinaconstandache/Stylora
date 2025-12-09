@@ -13,7 +13,6 @@ namespace Stylora.Infrastructure.Services
     public class VertexTryOnService : IVirtualTryOnService
     {
         private readonly HttpClient _httpClient;
-        // Verify this is your exact Project ID
         private const string ProjectId = "gen-lang-client-0932195243"; 
         private const string Location = "us-central1"; 
         private const string ModelId = "virtual-try-on-preview-08-04";
@@ -25,20 +24,17 @@ namespace Stylora.Infrastructure.Services
 
         public async Task<byte[]> ExecuteTryOnAsync(byte[] personImage, byte[] garmentImage)
         {
-            // --- DEBUG: Verify Key File Exists ---
             var keyPath = Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS");
             if (string.IsNullOrEmpty(keyPath) || !File.Exists(keyPath))
             {
                 throw new FileNotFoundException($"GCP Key not found at: {Path.GetFullPath(keyPath ?? "null")}. Did you set 'Copy to Output Directory' to 'Copy Always'?");
             }
-            // -------------------------------------
 
-            // 1. Authenticate (CORRECTED METHOD)
-            // Vertex AI requires the "Cloud Platform" scope, not an OIDC token.
+            // 1. Authenticate 
             var credential = GoogleCredential.FromFile(keyPath)
                 .CreateScoped("https://www.googleapis.com/auth/cloud-platform");
 
-            // Get the actual OAuth 2.0 token
+            // Get OAuth 2.0 token
             var token = await credential.UnderlyingCredential.GetAccessTokenForRequestAsync();
 
             // 2. Prepare URL
@@ -77,7 +73,6 @@ namespace Stylora.Infrastructure.Services
             // 5. Parse Result
             using var doc = JsonDocument.Parse(responseString);
             
-            // Safety check: Ensure the response actually has predictions
             if (!doc.RootElement.TryGetProperty("predictions", out var predictions))
             {
                  throw new Exception($"API returned success but no predictions. Response: {responseString}");

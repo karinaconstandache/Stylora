@@ -20,7 +20,6 @@ namespace Stylora.API.Controllers
         [HttpPost("generate")]
         public async Task<IActionResult> Generate([FromBody] TryOnRequest request)
         {
-            // Simple validation
             if (!System.IO.File.Exists(request.PersonImagePath) || !System.IO.File.Exists(request.GarmentImagePath))
                 return NotFound("Images not found at the specified local paths.");
 
